@@ -46,11 +46,20 @@ const BreweryList = ({ navigation }) => {
             initialRegion={{
               latitude: 30.2672,
               longitude: -97.7431,
-              latitudeDelta: 0.15,
-              longitudeDelta: 0.15,
+              latitudeDelta: 0.5,
+              longitudeDelta: 0.5,
             }}
             style={{ height: 400, width: "100%" }}
-          ></MapView>
+          >
+            {data.map((brewery, idx) => (
+              <Marker
+                key={idx}
+                coordinate={brewery.Coordinates}
+                title={brewery.Brewery}
+                style={{ height: 5, width: 5 }}
+              ></Marker>
+            ))}
+          </MapView>
         </View>
       )}
     </ScrollView>
