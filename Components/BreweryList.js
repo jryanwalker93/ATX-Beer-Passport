@@ -1,3 +1,4 @@
+import "react-native-gesture-handler";
 import React from "react";
 import {
   ImageBackground,
@@ -5,13 +6,26 @@ import {
   Text,
   View,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 
-const BreweryList = () => {
+import data from "../Breweries.json";
+
+import BreweryListItem from "./BreweryListItem";
+
+const BreweryList = ({ navigation }) => {
   return (
-    <View>
-      <Text>Brewery List</Text>
-    </View>
+    <ScrollView>
+      <View>
+        {data.map((brewery, idx) => (
+          <BreweryListItem
+            brewery={brewery}
+            navigation={navigation}
+            key={idx}
+          />
+        ))}
+      </View>
+    </ScrollView>
   );
 };
 
