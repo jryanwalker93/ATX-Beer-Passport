@@ -23,13 +23,31 @@ const BreweryList = ({ navigation }) => {
 
   return (
     <ScrollView>
-      <TouchableOpacity
-        onPress={() =>
-          display === "list" ? setDisplay("map") : setDisplay("list")
-        }
+      <View
+        style={{
+          justifyContent: "center",
+          alignItems: "center",
+          height: 100,
+          width: "100%",
+        }}
       >
-        <Text>{display === "list" ? "list" : "map"}</Text>
-      </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() =>
+            display === "list" ? setDisplay("map") : setDisplay("list")
+          }
+          style={{
+            height: "75%",
+            width: "30%",
+            borderColor: "orange",
+            borderWidth: 1,
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: 5,
+          }}
+        >
+          <Text>View by: {display === "list" ? "list" : "map"}</Text>
+        </TouchableOpacity>
+      </View>
       {display === "list" ? (
         <View>
           {data.map((brewery, idx) => (
@@ -57,6 +75,10 @@ const BreweryList = ({ navigation }) => {
                 coordinate={brewery.Coordinates}
                 title={brewery.Brewery}
                 style={{ height: 5, width: 5 }}
+                description="view brewery page"
+                onCalloutPress={() => {
+                  navigation.navigate("Brewery", { brewery: brewery });
+                }}
               ></Marker>
             ))}
           </MapView>
