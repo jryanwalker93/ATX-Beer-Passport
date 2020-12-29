@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import React from "react";
+import React, { useState } from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -9,22 +9,50 @@ import {
   ScrollView,
 } from "react-native";
 
-import data from "../Breweries.json";
+import MapView, { Marker } from "react-native-maps";
 
+import data from "../Breweries.json";
 import BreweryListItem from "./BreweryListItem";
 
 const BreweryList = ({ navigation }) => {
+  const [display, setDisplay] = useState("list");
+
+  const changeDisplay = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <ScrollView>
-      <View>
-        {data.map((brewery, idx) => (
-          <BreweryListItem
-            brewery={brewery}
-            navigation={navigation}
-            key={idx}
-          />
-        ))}
-      </View>
+      <TouchableOpacity
+        onPress={() =>
+          display === "list" ? setDisplay("map") : setDisplay("list")
+        }
+      >
+        <Text>{display === "list" ? "list" : "map"}</Text>
+      </TouchableOpacity>
+      {display === "list" ? (
+        <View>
+          {data.map((brewery, idx) => (
+            <BreweryListItem
+              brewery={brewery}
+              navigation={navigation}
+              key={idx}
+            />
+          ))}
+        </View>
+      ) : (
+        <View style={{ height: "75%", width: "100%" }}>
+          <MapView
+            initialRegion={{
+              latitude: 30.2672,
+              longitude: -97.7431,
+              latitudeDelta: 0.15,
+              longitudeDelta: 0.15,
+            }}
+            style={{ height: 400, width: "100%" }}
+          ></MapView>
+        </View>
+      )}
     </ScrollView>
   );
 };
