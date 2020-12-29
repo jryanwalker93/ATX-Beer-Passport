@@ -17,10 +17,6 @@ import BreweryListItem from "./BreweryListItem";
 const BreweryList = ({ navigation }) => {
   const [display, setDisplay] = useState("list");
 
-  const changeDisplay = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <ScrollView>
       <View

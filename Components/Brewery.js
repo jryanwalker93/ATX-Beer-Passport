@@ -11,7 +11,6 @@ import {
 
 const Brewery = ({ route }) => {
   const { brewery } = route.params;
-  console.log(brewery);
   return (
     <View>
       <Image source={{ uri: brewery.Logo }} style={styles.Logo}></Image>
