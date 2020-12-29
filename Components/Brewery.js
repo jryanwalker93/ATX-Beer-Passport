@@ -14,7 +14,7 @@ const Brewery = ({ props, route }) => {
   return (
     <View>
       <Image source={{ uri: brewery.Logo }} style={styles.Logo}></Image>
-      <Text>{brewery.Brewery}</Text>
+      <Text style={styles.Info}>{brewery.Brewery}</Text>
     </View>
   );
 };
@@ -23,6 +23,11 @@ const styles = StyleSheet.create({
   Logo: {
     height: "75%",
     width: "100%",
+  },
+  Info: {
+    height: "10%",
+    fontSize: 25,
+    fontFamily: "Avenir",
   },
 });
 
