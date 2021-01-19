@@ -2,206 +2,226 @@
   {
     "Brewery": "4th Tap Brewing Cooperative",
     "Website": "https://www.4thtap.coop/",
-    "Street-Address": "10615 Metric Boulevard",
+    "streetAddress": "10615 Metric Boulevard",
     "Zip": 78758,
     "Logo": "https://cdn.inksoft.com/images/publishers/3156/stores/4th_tap/img/header-logo.png?decache=637304821853330000",
-    "Coordinates": { "latitude": 30.38524, "longitude": -97.71186 }
+    "Coordinates": { "latitude": 30.38524, "longitude": -97.71186 },
+    "phone": "(512) 904-9817"
   },
   {
     "Brewery": "Adelbert’s Brewery",
     "Website": "https://www.adelbertsbeer.com/",
-    "Street-Address": "2314 Rutland Drive",
+    "streetAddress": "2314 Rutland Drive",
     "Zip": 78758,
     "Logo": "https://images.squarespace-cdn.com/content/5e4d6fcdb189ea460a283126/1582137559740-DKV2WU1SEYIS2I45PPPZ/AB_logo_B%26W.png?format=1500w&content-type=image%2Fpng",
-    "Coordinates": { "latitude": 30.38269, "longitude": -97.72027 }
+    "Coordinates": { "latitude": 30.38269, "longitude": -97.72027 },
+    "phone": "(512) 662-1462"
   },
   {
     "Brewery": "Austin Beerworks",
     "Website": "https://austinbeerworks.com/",
-    "Street-Address": "3001 Industrial Terrace",
+    "streetAddress": "3001 Industrial Terrace",
     "Zip": 78758,
     "Logo": "https://austinbeerworks.com/img/masthead-a.png",
-    "Coordinates": { "latitude": 30.37968, "longitude": -97.72984 }
+    "Coordinates": { "latitude": 30.37968, "longitude": -97.72984 },
+    "phone": "(512) 821-2494"
   },
   {
     "Brewery": "Black Star Co-Op",
     "Website": "https://blackstar.coop/",
-    "Street-Address": "7020 Easy Wind Drive",
+    "streetAddress": "7020 Easy Wind Drive",
     "Zip": 78752,
     "Logo": "https://blackstar.coop/wp-content/uploads/2017/11/blackstar-logo.png",
-    "Coordinates": { "latitude": 30.3385, "longitude": -97.71896 }
+    "Coordinates": { "latitude": 30.3385, "longitude": -97.71896 },
+    "phone": "(512) 452-2337"
   },
   {
     "Brewery": "Brewtorium",
     "Website": "http://thebrewtorium.com/",
-    "Street-Address": "6015 Dillard Circle",
+    "streetAddress": "6015 Dillard Circle",
     "Zip": 78752,
     "Logo": "https://static.wixstatic.com/media/5cc475_633a97a5d353497ea05c09e98353aec7~mv2_d_1731_1943_s_2.png/v1/fill/w_104,h_114,al_c,q_85,usm_0.66_1.00_0.01/Brewtorium-Final-Logo-Ivory_Gold_B_JUST-.webp",
-    "Coordinates": { "latitude": 30.32599, "longitude": -97.71686 }
+    "Coordinates": { "latitude": 30.32599, "longitude": -97.71686 },
+    "phone": "(512) 524-0323"
   },
   {
     "Brewery": "Celis Brewing",
     "Website": "https://www.celisbeers.com/",
-    "Street-Address": "10001 Metric Boulevard",
+    "streetAddress": "10001 Metric Boulevard",
     "Zip": 78758,
     "Logo": "https://static.wixstatic.com/media/74bd2b_2f99cf9b0b6345de92e5d4461c785b09~mv2.png/v1/fill/w_76,h_59,al_c,q_85,usm_0.66_1.00_0.01/74bd2b_2f99cf9b0b6345de92e5d4461c785b09~mv2.webp",
     "Coordinates": {
       "latitude": 30.380002750858633,
-      "longitude": -97.71594677334232
-    }
+      "longitude": -97.715
+    },
+    "phone": "(512) 524-2377"
   },
   {
     "Brewery": "Circle Brewing",
     "Website": "https://www.circlebrewing.com/",
-    "Street-Address": "2340 W Braker Lane",
+    "streetAddress": "2340 W Braker Lane",
     "Zip": 78758,
     "Logo": "https://static.wixstatic.com/media/0f6f24_d0ce4410c3e641438d7911e30baadc4c~mv2_d_7681_7478_s_4_2.png/v1/fill/w_159,h_155,al_c,q_85,usm_0.66_1.00_0.01/0f6f24_d0ce4410c3e641438d7911e30baadc4c~mv2_d_7681_7478_s_4_2.webp",
     "Coordinates": {
       "latitude": 30.39146086428285,
       "longitude": -97.7149549757491
-    }
+    },
+    "phone": "(512) 814-7599"
   },
   {
     "Brewery": "Draught House",
     "Website": "https://www.draughthouse.com/",
-    "Street-Address": "4112 Medical Parkway",
+    "streetAddress": "4112 Medical Parkway",
     "Zip": 78756,
     "Logo": "https://images.squarespace-cdn.com/content/5a3049b9be42d6df6b7d835e/1519580913905-0H1Q5GSKC4MTQJCCGELK/New-Logo-transparent.white.png?content-type=image%2Fpng",
     "Coordinates": {
       "latitude": 30.311216700979084,
       "longitude": -97.74183910514493
-    }
+    },
+    "phone": "(512) 452-6258"
   },
   {
     "Brewery": "Hopsquad Brewing",
     "Website": "http://hopsquad.com/",
-    "Street-Address": "2307 Kramer Lane",
+    "streetAddress": "2307 Kramer Lane",
     "Zip": 78758,
     "Logo": "http://hopsquad.com/static/logo-c02ccd8f81c537c7802e4bc28cbe98fa.png",
     "Coordinates": {
       "latitude": 30.39122802852722,
       "longitude": -97.71403188924283
-    }
+    },
+    "phone": "(512) 351-9654"
   },
   {
     "Brewery": "Willards Brewery",
     "Website": "https://willardsbrewery.com/",
-    "Street-Address": "2400 Patterson Industrial Drive",
+    "streetAddress": "2400 Patterson Industrial Drive",
     "Zip": 78660,
     "Logo": "https://willardsbrewery.com/wp-content/uploads//2020/10/WillardsBrewery-Logo-web-OutlineGpld.svg",
     "Coordinates": {
       "latitude": 30.402205424524062,
       "longitude": -97.62781971623028
-    }
+    },
+    "phone": "(512) 910-4099"
   },
   {
     "Brewery": "Oskar Blues",
     "Website": "https://www.oskarblues.com/",
-    "Street-Address": "10420 Metric Boulevard",
+    "streetAddress": "10420 Metric Boulevard",
     "Zip": 78758,
     "Logo": "https://www.oskarblues.com/wp-content/themes/oskar/assets/images/OB-Shield-Logo.svg",
     "Coordinates": {
       "latitude": 30.384289089632567,
       "longitude": -97.71450103341999
-    }
+    },
+    "phone": "(512) 243-7054"
   },
   {
     "Brewery": "Pinthouse Pizza - Burnet",
     "Website": "http://pinthousepizza.com/burnet",
-    "Street-Address": "4729 Burnet Road",
+    "streetAddress": "4729 Burnet Road",
     "Zip": 78756,
     "Logo": "https://pbs.twimg.com/profile_images/1067891157244342272/YkEtYfqQ_400x400.jpg",
     "Coordinates": {
       "latitude": 30.31871285251643,
       "longitude": -97.73901547563935
-    }
+    },
+    "phone": "(512) 436-9605"
   },
   {
     "Brewery": "Bluebonnet Beer Company",
     "Website": "http://www.bluebonnetbeerco.com/",
-    "Street-Address": "1700 Bryant Dr. #107",
+    "streetAddress": "1700 Bryant Dr. #107",
     "Zip": 78644,
     "Logo": "https://isteam.wsimg.com/ip/11e5a363-66a3-11e4-b853-14feb5d9f2e6/ols/249_original/:/rs=w:400,h:400",
     "Coordinates": {
       "latitude": 30.49208833744805,
       "longitude": -97.64685979663243
-    }
+    },
+    "phone": "(512) 774-4258"
   },
   {
     "Brewery": "Bull Creek Brewing",
     "Website": "http://www.bullcreekbrewing.com/",
-    "Street-Address": "7100 FM 3405",
+    "streetAddress": "7100 FM 3405",
     "Zip": 78642,
     "Logo": "http://bullcreekbrewing.com/wp-content/uploads/2014/06/BCBClogotrans_white1.png",
     "Coordinates": {
       "latitude": 30.705815223054095,
       "longitude": -97.87035163156678
-    }
+    },
+    "phone": "(512) 940-5079"
   },
   {
     "Brewery": "Compadre Brewing",
     "Website": "http://www.compadrebrewing.com/",
-    "Street-Address": "16920 Joe Barbee Dr. Bldg 1",
+    "streetAddress": "16920 Joe Barbee Dr. Bldg 1",
     "Zip": 78644,
     "Logo": "https://static.spotapps.co/web/compadrebrewing--com/custom/about_us_page_top.png",
     "Coordinates": {
       "latitude": 30.470430829438293,
       "longitude": -97.66400074691228
-    }
+    },
+    "phone": "(512) 992-0665"
   },
   {
     "Brewery": "Flix Brewhouse",
     "Website": "https://www.flixbrewhouse.com/round-rock",
-    "Street-Address": "2200 S Interstate 35 B1",
+    "streetAddress": "2200 S Interstate 35 B1",
     "Zip": 78681,
     "Logo": "https://www.flixbrewhouse.com/Media/1031/logo.svg",
     "Coordinates": {
       "latitude": 30.48859381687682,
       "longitude": -97.67920836225363
-    }
+    },
+    "phone": "(512) 244-3549"
   },
   {
     "Brewery": "Humble Pint Brewing Co.",
     "Website": "https://humblepint.com/",
-    "Street-Address": "11880 Hero Way Y Suite 208",
+    "streetAddress": "11880 Hero Way Y Suite 208",
     "Zip": 78641,
     "Logo": "https://i1.wp.com/humblepint.com/wp-content/uploads/2017/07/cropped-humble_pint_logo_small-1.png?w=345&ssl=1",
     "Coordinates": {
       "latitude": 30.57822753969272,
       "longitude": -97.86879524691054
-    }
+    },
+    "phone": "(512) 337-5007"
   },
   {
     "Brewery": "Pinthouse Pizza - Round Rock",
     "Website": "http://pinthousepizza.com/round-rock",
-    "Street-Address": "2800 Hoppe Trail",
+    "streetAddress": "2800 Hoppe Trail",
     "Zip": 78681,
     "Logo": "https://pbs.twimg.com/profile_images/1067891157244342272/YkEtYfqQ_400x400.jpg",
     "Coordinates": {
       "latitude": 30.539750391840787,
       "longitude": -97.69392449293595
-    }
+    },
+    "phone": "(512) 717-0869"
   },
   {
     "Brewery": "Red Horn Coffee House & Brewing Co.",
     "Website": "http://www.redhornbrew.com/",
-    "Street-Address": "1301 W. Parmer Lane #800",
+    "streetAddress": "1301 W. Parmer Lane #800",
     "Zip": 78613,
     "Logo": "https://cdn.shopify.com/s/files/1/2255/8593/files/Asset_1_x60.png?v=1547497786",
     "Coordinates": {
       "latitude": 30.53397647963961,
       "longitude": -97.78012612787408
-    }
+    },
+    "phone": "(512) 986-7038"
   },
   {
     "Brewery": "Rentsch Brewery",
     "Website": "http://www.rentschbrewery.com/",
-    "Street-Address": "2500 NE Inner Loop",
+    "streetAddress": "2500 NE Inner Loop",
     "Zip": 78626,
     "Logo": "https://img1.wsimg.com/isteam/ip/67a6123e-5a1c-44e4-a0ff-846e77587c24/Rentsch%20Words.png/:/rs=w:1023,cg:true,m/rs=h:192px/qt=q:95",
     "Coordinates": {
       "latitude": 30.667769049557123,
       "longitude": -97.65657751622578
-    }
+    },
+    "phone": "(512) 688-5046"
   }
 ]
