@@ -7,27 +7,47 @@ import {
   TouchableOpacity,
   ScrollView,
   Image,
+  Linking,
+  Button,
 } from "react-native";
+import { openMap, createOpenLink } from "react-native-open-maps";
 
 const Brewery = ({ route }) => {
   const { brewery } = route.params;
+  const name = brewery.Brewery;
   return (
     <View>
       <Image source={{ uri: brewery.Logo }} style={styles.Logo}></Image>
       <Text style={styles.Info}>{brewery.Brewery}</Text>
+      <Text
+        style={styles.Info}
+      >{`${brewery.streetAddress}, ${brewery.Zip}`}</Text>
+      <Button
+        title={`${brewery.phone}`}
+        onPress={() => Linking.openURL(`tel:${brewery.phone}`)}
+      ></Button>
+      <Button
+        title="Go to Website"
+        onPress={() => Linking.openURL(`${brewery.Website}`)}
+      ></Button>
+      <Button
+        title="Directions"
+        onPress={() => openMap({ name, query: `${brewery.Brewery}` })}
+      ></Button>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   Logo: {
-    height: "75%",
+    height: "50%",
     width: "100%",
   },
   Info: {
-    height: "10%",
+    height: "7%",
     fontSize: 25,
     fontFamily: "Avenir",
+    paddingBottom: "5%",
   },
 });
 
