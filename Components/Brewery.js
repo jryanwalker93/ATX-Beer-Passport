@@ -10,7 +10,7 @@ import {
   Linking,
   Button,
 } from "react-native";
-import { openMap, createOpenLink } from "react-native-open-maps";
+import openMap from "react-native-open-maps";
 
 const Brewery = ({ route }) => {
   const { brewery } = route.params;
@@ -32,7 +32,13 @@ const Brewery = ({ route }) => {
       ></Button>
       <Button
         title="Directions"
-        onPress={() => openMap({ name, query: `${brewery.Brewery}` })}
+        onPress={() =>
+          openMap({
+            query: name,
+            latitude: brewery.Coordinates.latitude,
+            longitude: brewery.Coordinates.longitude,
+          })
+        }
       ></Button>
     </View>
   );
