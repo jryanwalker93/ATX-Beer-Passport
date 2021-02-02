@@ -1,17 +1,15 @@
-// const firebase = require("firebase/app");
-// const firebase = require("firebase");
-// require("firebase/database");
+const { db } = require("./config");
 
-// import config from "./config";
-const db = require("./config");
-// console.log(firebaseConfig);
+console.log("db: ", db);
 
-// firebase.initializeApp(firebaseConfig);
+const getAllBreweries = () => {
+  console.log("AKDHAFSDIHF");
+  return db.ref("breweries/").once("value");
+  // .then((data) => {
+  //   return data.val();
+  // });
+};
 
-// const db = firebase.database();
-
-console.log(db);
-
-// const showDB = () => {
-//   return db.ref();
-// };
+module.exports = {
+  getAllBreweries,
+};

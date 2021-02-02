@@ -1,5 +1,5 @@
 import "react-native-gesture-handler";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -11,11 +11,21 @@ import {
 
 import MapView, { Marker } from "react-native-maps";
 
+import { getAllBreweries } from "../database/index";
 import data from "../Breweries.json";
 import BreweryListItem from "./BreweryListItem";
 
 const BreweryList = ({ navigation }) => {
   const [display, setDisplay] = useState("list");
+  const [breweryList, setBreweryList] = useState([]);
+
+  useEffect(() => {
+    getAllBreweries()
+      .then((breweries) => {
+        setBreweryList(breweries.val());
+      })
+      .then(() => console.log("BREWERY LIST: ", breweryList));
+  }, []);
 
   return (
     <ScrollView>
@@ -46,38 +56,46 @@ const BreweryList = ({ navigation }) => {
       </View>
       {display === "list" ? (
         <View>
-          {data.map((brewery, idx) => (
-            <BreweryListItem
-              brewery={brewery}
-              navigation={navigation}
-              key={idx}
-            />
-          ))}
+          {breweryList.length ? (
+            breweryList.map((brewery, idx) => (
+              <BreweryListItem
+                brewery={brewery}
+                navigation={navigation}
+                key={idx}
+              />
+            ))
+          ) : (
+            <Text>Loading</Text>
+          )}
         </View>
       ) : (
         <View style={{ height: "75%", width: "100%" }}>
-          <MapView
-            initialRegion={{
-              latitude: 30.2672,
-              longitude: -97.7431,
-              latitudeDelta: 0.5,
-              longitudeDelta: 0.5,
-            }}
-            style={{ height: 400, width: "100%" }}
-          >
-            {data.map((brewery, idx) => (
-              <Marker
-                key={idx}
-                coordinate={brewery.Coordinates}
-                title={brewery.Brewery}
-                style={{ height: 5, width: 5 }}
-                description="view brewery page"
-                onCalloutPress={() => {
-                  navigation.navigate("Brewery", { brewery: brewery });
-                }}
-              ></Marker>
-            ))}
-          </MapView>
+          {breweryList.length ? (
+            <MapView
+              initialRegion={{
+                latitude: 30.2672,
+                longitude: -97.7431,
+                latitudeDelta: 0.5,
+                longitudeDelta: 0.5,
+              }}
+              style={{ height: 400, width: "100%" }}
+            >
+              {breweryList.map((brewery, idx) => (
+                <Marker
+                  key={idx}
+                  coordinate={brewery.Coordinates}
+                  title={brewery.Brewery}
+                  style={{ height: 5, width: 5 }}
+                  description="view brewery page"
+                  onCalloutPress={() => {
+                    navigation.navigate("Brewery", { brewery: brewery });
+                  }}
+                ></Marker>
+              ))}
+            </MapView>
+          ) : (
+            <Text>Loading</Text>
+          )}
         </View>
       )}
     </ScrollView>
