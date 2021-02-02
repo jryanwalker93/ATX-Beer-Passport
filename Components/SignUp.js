@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   ImageBackground,
   StyleSheet,
@@ -8,9 +8,13 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import { openDatabase } from "expo-sqlite";
+
 const SignUp = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
+
+  useEffect(() => {});
 
   return (
     <View style={styles.container}>
@@ -35,7 +39,10 @@ const SignUp = () => {
       <TouchableOpacity>
         <Text style={styles.forgot}>Forgot Password?</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginBtn}>
+      <TouchableOpacity
+        style={styles.loginBtn}
+        onPress={() => registerUser(userEmail, userPassword)}
+      >
         <Text style={styles.loginText}>LOGIN</Text>
       </TouchableOpacity>
       <TouchableOpacity>

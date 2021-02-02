@@ -10,7 +10,6 @@ import {
 } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { seedDatabase } from "./database/seed";
 import SignUp from "./Components/SignUp";
 import BreweryList from "./Components/BreweryList";
 import HomeScreen from "./Components/HomeScreen";
