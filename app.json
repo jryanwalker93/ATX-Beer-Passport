@@ -25,6 +25,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "facebookScheme": "fb455650858959836",
+    "facebookAppId": "455650858959836",
+    "facebookDisplayName": "atxBeerPassport"
   }
 }

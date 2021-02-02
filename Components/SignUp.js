@@ -8,7 +8,39 @@ import {
   TouchableOpacity,
 } from "react-native";
 
+import * as Facebook from "expo-facebook";
+
+import axios from "axios";
 import { openDatabase } from "expo-sqlite";
+
+// Facebook.initializeAsync();
+
+async function logIn() {
+  try {
+    await Facebook.initializeAsync();
+    const {
+      type,
+      token,
+      expirationDate,
+      permissions,
+      declinedPermissions,
+    } = await Facebook.logInWithReadPermissionsAsync({
+      permissions: ["public_profile"],
+    });
+    if (type === "success") {
+      // Get the user's name using Facebook's Graph API
+      const response = await axios.get(
+        `https://graph.facebook.com/me?access_token=${token}`
+      );
+      alert(`Hi ${response.data.name}!`);
+      console.log(response);
+    } else {
+      // type === 'cancel'
+    }
+  } catch ({ message }) {
+    alert(`Facebook Login Error: ${message}`);
+  }
+}
 
 const SignUp = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -38,6 +70,11 @@ const SignUp = () => {
       </View>
       <TouchableOpacity>
         <Text style={styles.forgot}>Forgot Password?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <Text style={styles.loginBtn} onPress={logIn}>
+          Facebook
+        </Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.loginBtn}
