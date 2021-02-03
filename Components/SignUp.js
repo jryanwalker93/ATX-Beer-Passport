@@ -17,28 +17,29 @@ import { openDatabase } from "expo-sqlite";
 
 async function logIn() {
   try {
-    await Facebook.initializeAsync();
+    await Facebook.initializeAsync({ appId: "455650858959836" });
     const {
       type,
       token,
       expirationDate,
       permissions,
       declinedPermissions,
+      userId,
     } = await Facebook.logInWithReadPermissionsAsync({
-      permissions: ["public_profile"],
+      permissions: ["email"],
     });
     if (type === "success") {
       // Get the user's name using Facebook's Graph API
       const response = await axios.get(
-        `https://graph.facebook.com/me?access_token=${token}`
+        `https://graph.facebook.com/${userId}?fields=email,name&access_token=${token}`
       );
-      alert(`Hi ${response.data.name}!`);
-      console.log(response);
+      alert(`Hi ${response.data.name}, ${response.data.email}!`);
     } else {
       // type === 'cancel'
     }
   } catch ({ message }) {
     alert(`Facebook Login Error: ${message}`);
+    console.log(message);
   }
 }
 
